@@ -1,0 +1,16 @@
+body {
+  text-align: center;
+}
+
+body .container {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+#title {
+  font-size: 3em;
+}
+
+.green {
+  color: #5bbd72;
+}

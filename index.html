@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>
+    SNAP Simulator
+  </title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.2/semantic.min.css">
+
+  <!-- JavaScript -->
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+  <!-- Semantic UI -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.2/semantic.min.js"></script>
+
+  <!-- App Styles -->
+  <link rel="stylesheet" href="css/app.css">
+
+  <!-- App Scripts -->
+  <script src="js/app.js"></script>
+</head>
+<body ng-app="snapSim">
+  <div class="container" ng-controller="appController">
+    <h1 id="title">
+      <span class="green">Snap</span>Sim
+    </h1>
+    <p>See some of the challenges that a family of three on SNAP may have to make.</p>
+    <div class="ui divider"></div>
+    <div id="firstpage" class="ui nine wide centered page grid">
+      <div class="two column row">
+        <h2 class="header">Meet Alexa</h2>
+      </div>
+      <div class="five wide column ui card">
+        <div class="content">
+          <span class="header">Alexa Hansen</span>
+          <div class="description">
+            <p>
+              Alexa Hansen is a 32 year old widowed mother from Ridgeport, Mississippi. 
+            </p>
+            <p>
+              After her husband died three months ago, she moved into a small 2-bedroom apartment with her two children, Paul and Jane. 
+            </p>
+            <p>
+              She recently got a job as a waitress at a local restaurant. It does not pay very well, but it is her primary source of income. She starts work at 8AM to and leaves at 6PM.
+            </p>
+          </div>
+        </div> <!-- description -->
+      </div> <!-- alexa row card -->
+      <div class="two column row">
+        <h2 class="header">And her kids</h2>
+      </div>
+      <div class="row five wide">
+        <div class="five wide column ui card">
+          <div class="content">
+            <span class="header">Paul Hansen</span>
+            <div class="description">
+              <p>
+                Paul is an energetic four-year-old who has just started preschool. 
+              </p>
+              <p>
+                Things have been especially tough for him now because he lost his father and because his mother has to work so often.
+              </p>
+            </div>
+          </div> <!-- description -->
+        </div> <!-- child 1 card -->
+        <div class="column"></div>
+        <div class="five wide column ui card">
+          <div class="content">
+            <span class="header">Jane Hansen</span>
+            <div class="description">
+              <p>
+                Jane is a bright 14 year old who is a straight-A student and loves theater. 
+              </p>
+              <p>
+                She had hoped to join the school's theater club, but could not because she babysits her younger brother after school each day.
+              </p>
+            </div>
+          </div> <!-- description -->
+        </div> <!-- child 2 card -->
+      </div> <!-- kids row -->
+      <div class="two column row">
+        <h2 class="header">Your job</h2>
+      </div>
+      <div class="twelve wide column">
+        <p>
+          Today, Alexa has gone to Greenshop, the local supermarket, after spending the day working. She will buy groceries and hopes to return home to spend a little time with her kids before they go to sleep.
+        </p>
+        <p>
+          Your job is to help her select which items to keep in her cart so that she stays within her SNAP budget.
+        </p>
+      </div> <!-- job row -->
+      <div class="ui divider"></div>
+      <button class="ui primary button">Begin</button>
+    </div> <!-- first page -->
+  </div>
+</body>
+</html>
