@@ -32,9 +32,9 @@
     <h1 id="title">
       <span class="green">Snap</span>Sim
     </h1>
-    <p>See some of the challenges that a family of three on SNAP may have to make.</p>
+    <p>See some of the sacrifices that a family of three on SNAP may have to make.</p>
     <div class="ui divider"></div>
-    <div id="firstpage" class="ui nine wide centered page grid">
+    <div id="firstpage" class="ui nine wide centered page grid" ng-show="pageNumber == 1">
       <div class="two column row">
         <h2 class="header">Meet Alexa</h2>
       </div>
@@ -96,10 +96,35 @@
         <p>
           Your job is to help her select which items to keep in her cart so that she stays within her SNAP budget.
         </p>
+        <p>
+          As you clear the cart, look at why Alexa has chosen each item, and pay attention to the sacrifices being made.
+        </p>
       </div> <!-- job row -->
       <div class="ui divider"></div>
-      <button class="ui primary button">Begin</button>
+      <button class="ui primary button" ng-click="advancePage()">Begin</button>
     </div> <!-- first page -->
+
+    <div ng-show="pageNumber == 2" style="margin-left: 8%"> <!-- TODO: Figure out how to center with semantic UI, centered grid isn't working -->
+      <div class="ui cards">
+        <div class="ui card" ng-repeat="item in story.items | orderBy: 'name'">
+          <div class="content">
+            <span class="header">{{item.name}}</span>
+            <div class="meta">
+              <a>{{item.description}}</a>
+            </div>
+            <div class="description">
+              {{item.notes}}
+            </div>
+          </div>
+          <div class="extra content">
+            <h3>${{item.price}}</h3>
+          </div>
+          <div class="ui bottom attached red button">
+            Remove
+          </div>
+        </div>
+      </div> <!-- second page -->
+    </div>
   </div>
 </body>
 </html>
