@@ -104,13 +104,14 @@
       <button class="ui primary button" ng-click="advancePage()">Begin</button>
     </div> <!-- first page -->
 
-    <div ng-show="pageNumber == 2" style="margin-left: 8%"> <!-- TODO: Figure out how to center with semantic UI, centered grid isn't working -->
-      <div class="ui cards">
+    <div ng-show="pageNumber == 2"> <!-- TODO: Figure out how to center with semantic UI, centered grid isn't working -->
+      <h2 ng-class="used > budget ? 'red' : 'green'">Used: ${{used}}, Budget: ${{budget}}</h2>
+      <div class="ui cards" style="margin-left: 8%">
         <div class="ui card" ng-repeat="item in story.items | orderBy: 'name'">
           <div class="content">
             <span class="header">{{item.name}}</span>
             <div class="meta">
-              <a>{{item.description}}</a>
+              <span>{{item.description}}</span>
             </div>
             <div class="description">
               {{item.notes}}
@@ -119,8 +120,11 @@
           <div class="extra content">
             <h3>${{item.price}}</h3>
           </div>
-          <div class="ui bottom attached red button">
+          <div class="ui bottom attached purple button" ng-click="itemSelected(item)" ng-if="item.selected">
             Remove
+          </div>
+          <div class="ui bottom attached teal button" ng-click="itemSelected(item)" ng-if="!item.selected">
+           Add Back 
           </div>
         </div>
       </div> <!-- second page -->
