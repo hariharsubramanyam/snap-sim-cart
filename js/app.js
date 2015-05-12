@@ -2,7 +2,7 @@ angular.module("snapSim", [])
   .controller("appController", function($scope) {
     // Set up some constants.
     var DATA_URL = "data/story_cart.json";
-    var BUDGET = 20.00;
+    var BUDGET = 86.50;
 
     // Make scope accessible globally for console debugging.
     window.$s = $scope;
