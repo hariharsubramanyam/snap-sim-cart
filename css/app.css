@@ -1,11 +1,17 @@
 body {
   text-align: center;
+
+}
+
+body, h1, h2, h3, h4 {
+   font-family: 'Merriweather', serif;
 }
 
 body .container {
   padding-top: 1em;
   padding-bottom: 5em;
 }
+
 
 #title {
   font-size: 3em;

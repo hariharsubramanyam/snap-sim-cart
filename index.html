@@ -9,6 +9,7 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.2/semantic.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 
   <!-- JavaScript -->
 
@@ -32,30 +33,30 @@
     <h1 id="title">
       <span class="green">Snap</span>Sim
     </h1>
-    <p>See some of the sacrifices that a family of three on SNAP may have to make.</p>
+    <p>An interactive simulation of the challenges a family on SNAP benefits may face.</p>
     <div class="ui divider"></div>
     <div id="firstpage" class="ui nine wide centered page grid" ng-show="pageNumber == 1">
       <div class="two column row">
-        <h2 class="header">Meet Alexa</h2>
+        <h2 class="header">Your name is Alexa Hansen.</h2>
       </div>
-      <div class="five wide column ui card">
+      <div class="ten wide column ui card">
         <div class="content">
-          <span class="header">Alexa Hansen</span>
+          <!-- <span class="header">Alexa Hansen</span> -->
           <div class="description">
             <p>
-              Alexa Hansen is a 32 year old widowed mother from Ridgeport, Mississippi. 
+              You are a 32 year old widowed mother from Ridgeport, Mississippi. 
             </p>
             <p>
-              After her husband died three months ago, she moved into a small 2-bedroom apartment with her two children, Paul and Jane. 
+              After your husband died three months ago, you moved into a small 2-bedroom apartment with her two children, <strong>Paul</strong> and <strong>Jane.</strong>
             </p>
             <p>
-              She recently got a job as a waitress at a local restaurant. It does not pay very well, but it is her primary source of income. She starts work at 8AM to and leaves at 6PM.
+              You've recently got a job as a waitress at a local restaurant. It does not pay very well, but it is your primary source of income. You start work at 8AM and leave for home at 6PM.
             </p>
           </div>
         </div> <!-- description -->
       </div> <!-- alexa row card -->
       <div class="two column row">
-        <h2 class="header">And her kids</h2>
+        <h2 class="header">Your children:</h2>
       </div>
       <div class="row five wide">
         <div class="five wide column ui card">
@@ -66,7 +67,7 @@
                 Paul is an energetic four-year-old who has just started preschool. 
               </p>
               <p>
-                Things have been especially tough for him now because he lost his father and because his mother has to work so often.
+                Things have been especially tough for him now because he lost his father and because you have to work so often.
               </p>
             </div>
           </div> <!-- description -->
@@ -77,7 +78,7 @@
             <span class="header">Jane Hansen</span>
             <div class="description">
               <p>
-                Jane is a bright 14 year old who is a straight-A student and loves theater. 
+                Jane is a bright 14 year old who is a straight-A student and loves theater.
               </p>
               <p>
                 She had hoped to join the school's theater club, but could not because she babysits her younger brother after school each day.
@@ -87,18 +88,19 @@
         </div> <!-- child 2 card -->
       </div> <!-- kids row -->
       <div class="two column row">
-        <h2 class="header">Your job</h2>
+        <h2 class="header">The Problem:</h2>
       </div>
       <div class="twelve wide column">
         <p>
-          Today, Alexa has gone to Greenshop, the local supermarket, after spending the day working. She will buy groceries and hopes to return home to spend a little time with her kids before they go to sleep.
+          Today, you've has gone to Greenshop, the local supermarket, after spending the day working. You have picked up a few groceries and hope to return home to spend a little time with her kids before they go to sleep.
         </p>
         <p>
-          Your job is to help her select which items to keep in her cart so that she stays within her SNAP budget.
+          However, the cost of the groceries you've selected exceed the amount of money in your budget, which is provided by SNAP. 
         </p>
-        <p>
+<!--         <p>
           As you clear the cart, look at why Alexa has chosen each item, and pay attention to the sacrifices being made.
-        </p>
+        </p> -->
+        <p>You must remove some items from your cart until you are able to pay for what is left.
       </div> <!-- job row -->
       <div class="ui divider"></div>
       <button class="ui primary button" ng-click="advancePage()">Begin</button>
