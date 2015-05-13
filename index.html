@@ -128,7 +128,7 @@
             </div>
           </div>
           <div class="extra content">
-            <h3>${{item.price}}</h3>
+            <h3>{{item.quantity}} &times ${{item.price}}</h3>
           </div>
           <div class="ui bottom attached purple button" ng-click="itemSelected(item)" ng-if="item.selected">
             Remove
