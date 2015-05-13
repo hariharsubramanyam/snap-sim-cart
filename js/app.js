@@ -24,8 +24,9 @@ angular.module("snapSim", [])
       $scope.story = data;
       var used = 0;
       data.items.forEach(function(item) {
+        console.log(item)
         item.selected = true;
-        used += item.price;
+        used += item.price * item.quantity;
       });
       $scope.used = round(used);
     });
