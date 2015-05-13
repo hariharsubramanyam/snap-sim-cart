@@ -114,6 +114,8 @@
 
     <div ng-show="pageNumber == 2"> <!-- TODO: Figure out how to center with semantic UI, centered grid isn't working -->
       <h2 ng-class="used > budget ? 'red' : 'green'">Used: ${{used}}, Budget: ${{budget}}</h2>
+      <button ng-show="used <= budget" class="ui green button" ng-click="advancePage()" style="margin-bottom: 10px">Finish</button>
+
       <div class="ui cards" style="margin-left: 8%">
         <div class="ui card" ng-repeat="item in story.items | orderBy: 'name'">
           <div class="content">
@@ -135,7 +137,14 @@
            Add Back 
           </div>
         </div>
-      </div> <!-- second page -->
+      </div> 
+    </div> <!-- second page -->
+
+    <div ng-show="pageNumber == 3">
+      <h2>How many families near you make these sacrifices every day?</h2>
+      <h4>Use the map below to see how many people in your state are on the Supplemental Nutrition Assistance Program (SNAP).</h4>
+      <h4>To make a difference, please find your local food bank below and donate.</h4>
+      <iframe width='80%' height='520' frameborder='0' src='https://hahasubbu.cartodb.com/viz/f5b58732-f8f2-11e4-b28c-0e4fddd5de28/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
     </div>
   </div>
 </body>
